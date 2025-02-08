@@ -7,7 +7,7 @@ const user = ref(null);
 const error = ref<string | null>(null);
 const isPending = ref(false);
 
-const BACKEND_URL = 'http://localhost:3131/api/auth';
+const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:3131/api/auth';
 
 auth.onAuthStateChanged((authUser) => {
   if (authUser) {
@@ -42,11 +42,12 @@ const googleSignIn = async () => {
   try {
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
+    const idToken = await result.user.getIdToken();
     
     const userData = {
       email: result.user.email,
       uid: result.user.uid,
-      name: result.user.displayName
+      idToken
     };
     
     return await sendToBackend('google', userData);
@@ -59,16 +60,20 @@ const googleSignIn = async () => {
   }
 };
 
-const registerWithEmailPassword = async (email: string, password: string) => {
+const registerWithEmailPassword = async (email: string, password: string, name: string) => {
   error.value = null;
   isPending.value = true;
   
   try {
     const result = await createUserWithEmailAndPassword(auth, email, password);
+    const idToken = await result.user.getIdToken();
     
     const userData = {
       email: result.user.email,
-      uid: result.user.uid
+      name,
+      firebaseUid: result.user.uid,
+      provider: 'email',
+      idToken
     };
     
     return await sendToBackend('register', userData);
@@ -81,16 +86,17 @@ const registerWithEmailPassword = async (email: string, password: string) => {
   }
 };
 
-const signInWithEmailPassword = async (email: string, password: string) => {
+const signInWithEmailPasswordFunc = async (email: string, password: string) => {
   error.value = null;
   isPending.value = true;
   
   try {
-    const result = await signInWithEmailPassword(auth, email, password);
+    const result = await signInWithEmailAndPassword(auth, email, password);
+    const idToken = await result.user.getIdToken();
     
     const userData = {
       email: result.user.email,
-      uid: result.user.uid
+      idToken
     };
     
     return await sendToBackend('login', userData);
@@ -127,5 +133,5 @@ export {
   googleSignIn, 
   logout, 
   registerWithEmailPassword, 
-  signInWithEmailPassword 
+  signInWithEmailPasswordFunc 
 };

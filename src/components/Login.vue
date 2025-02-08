@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { signInWithEmailPassword, googleSignIn, error, isPending } from '../auth';
+import { signInWithEmailPasswordFunc, googleSignIn, error, isPending } from '../auth';
 
 const email = ref('');
 const password = ref('');
@@ -8,7 +8,7 @@ const emit = defineEmits(['close']);
 
 const login = async () => {
   try {
-    await signInWithEmailPassword(email.value, password.value);
+    await signInWithEmailPasswordFunc(email.value, password.value);
     emit('close');
   } catch (err) {
     // Error is handled in auth.ts

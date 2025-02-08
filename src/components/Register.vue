@@ -4,13 +4,14 @@ import { registerWithEmailPassword } from '../auth';
 
 const email = ref('');
 const password = ref('');
+const name = ref(''); // new reactive property for name
 const emit = defineEmits(['close']);
 
 const register = async () => {
   try {
-    await registerWithEmailPassword(email.value, password.value);
+    await registerWithEmailPassword(email.value, password.value, name.value);
     emit('close');
-  } catch (error) {
+  } catch (error: any) {
     alert(error.message);
   }
 };
@@ -21,6 +22,8 @@ const register = async () => {
     <div class="modal-content">
       <span class="close" @click="$emit('close')">&times;</span>
       <h2>Register</h2>
+      <!-- New input for name -->
+      <input type="text" v-model="name" placeholder="Name" />
       <input type="email" v-model="email" placeholder="Email" />
       <input type="password" v-model="password" placeholder="Password" />
       <button @click="register">Register</button>
