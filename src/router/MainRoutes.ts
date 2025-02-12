@@ -1,15 +1,31 @@
 const MainRoutes = {
-  path: '/',
-  component: () => import('@/layouts/main/MainLayout.vue'),
+  path: '/main',
   meta: {
-    //requiresAuth: true
+    requiresAuth: true
   },
-  //redirect: '/',
+  redirect: '/main',
+  component: () => import('@/layouts/main/MainLayout.vue'),
   children: [
     {
-      name: 'Dashboard',
-      path: '/dashboard'
-    }
+      name: 'dashboard',
+      path: '/',
+      component: () => import('@/views/dashboard/DefaultDashboard.vue')
+    },
+    {
+      name: 'Session',
+      path: '/session',
+      component: () => import('@/views/_main/SessionView.vue')
+    },
+    {
+      name: 'Groups',
+      path: '/groups',
+      component: () => import('@/views/_main/GroupsView.vue')
+    },
+    {
+      name: 'Teste',
+      path: '/teste',
+      component: () => import('@/views/_main/TesteView.vue')
+    },
   ]
 };
 

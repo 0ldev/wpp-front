@@ -1,18 +1,18 @@
 import { ref } from 'vue';
-import { auth } from './firebase.ts';
+import { auth } from '@/auth/firebase';
 import { GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { router } from '@/router';
 
 const isLoggedIn = ref(false);
-const user = ref(null);
+export const user = ref(null);
 const error = ref<string | null>(null);
 const isPending = ref(false);
 
 const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:3131/api/auth';
 
-auth.onAuthStateChanged((authUser) => {
-  if (authUser) {
+auth.onAuthStateChanged((user) => {
+  if (user) {
     isLoggedIn.value = true;
-    user.value = authUser;
   } else {
     isLoggedIn.value = false;
     user.value = null;
@@ -49,8 +49,14 @@ const googleSignIn = async () => {
       uid: result.user.uid,
       idToken
     };
+
+    if (auth.currentUser){
+      user.value = result.user;
+      console.log(user.value)
+      await router.push('/dashboard')
+    }
     
-    return await sendToBackend('google', userData);
+    return //await sendToBackend('google', userData); TODO FIX HERE
   } catch (err) {
     console.error("Google Sign-In Error:", err);
     error.value = 'Could not complete sign in';
@@ -60,7 +66,7 @@ const googleSignIn = async () => {
   }
 };
 
-const registerWithEmailPassword = async ({email, password, name} : {email: string, password: string, name: string} ) => {
+const registerWithEmailPassword = async (email: string, password: string, name: string) => {
   error.value = null;
   isPending.value = true;
   
@@ -126,8 +132,7 @@ const logout = async () => {
 };
 
 export { 
-  isLoggedIn, 
-  user, 
+  isLoggedIn,
   error, 
   isPending, 
   googleSignIn, 

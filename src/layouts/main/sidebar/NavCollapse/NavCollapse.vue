@@ -1,6 +1,5 @@
 <script setup>
 import NavItem from '../NavItem/NavItem.vue';
-import Icon from '../IconSet.vue';
 
 const props = defineProps({ item: Object, level: Number });
 </script>
@@ -14,10 +13,10 @@ const props = defineProps({ item: Object, level: Number });
     <!---Dropdown  -->
     <!-- ---------------------------------------------- -->
     <template v-slot:activator="{ props }">
-      <v-list-item v-bind="props" :value="item.title" rounded class="mb-1" color="secondary">
+      <v-list-item v-bind="props" :value="item.title" rounded class="mb-1" color="primary">
         <!---Icon  -->
         <template v-slot:prepend>
-          <Icon :item="item.icon" :level="level" />
+          <component :is="item.icon" class="iconClass" :level="level"></component>
         </template>
         <!---Title  -->
         <v-list-item-title class="mr-auto">{{ item.title }}</v-list-item-title>

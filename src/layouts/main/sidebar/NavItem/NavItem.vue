@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import Icon from '../IconSet.vue';
-
-const props = withDefaults(defineProps<{ item: Icon, level?: number }>(), {
-  level: 0
-});
+<script setup>
+const props = defineProps({ item: Object, level: Number });
 </script>
 
 <template>
@@ -13,13 +9,13 @@ const props = withDefaults(defineProps<{ item: Icon, level?: number }>(), {
     :href="item.type === 'external' ? item.to : ''"
     rounded
     class="mb-1"
-    color="secondary"
+    color="primary"
     :disabled="item.disabled"
     :target="item.type === 'external' ? '_blank' : ''"
   >
     <!---If icon-->
     <template v-slot:prepend>
-      <Icon :item="props.item.icon" :level="props.level" />
+      <component :is="props.item.icon" class="iconClass" :level="props.level"></component>
     </template>
     <v-list-item-title>{{ item.title }}</v-list-item-title>
     <!---If Caption-->
@@ -29,9 +25,10 @@ const props = withDefaults(defineProps<{ item: Icon, level?: number }>(), {
     <!---If any chip or label-->
     <template v-slot:append v-if="item.chip">
       <v-chip
+        label
         :color="item.chipColor"
         class="sidebarchip hide-menu"
-        :size="item.chipIcon ? 'small' : 'default'"
+        size="small"
         :variant="item.chipVariant"
         :prepend-icon="item.chipIcon"
       >

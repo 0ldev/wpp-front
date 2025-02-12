@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Navbar from '@/components/public/Navbar.vue'
-import BgImage from '../../assets/wpp_background.jpg'
+import NavbarHome from '@/components/public/NavbarHome.vue';
+import BgImage from '@/assets/images/wpp_background.jpg'
 
 const features = [
   { title: 'Group Management', description: 'Extract phone numbers from groups and save them to TXT files' },
@@ -12,7 +12,7 @@ const features = [
 
 <template>
   <v-app>
-    <Navbar />
+    <NavbarHome />
       <v-parallax
           :src="BgImage"
           height="95vh"

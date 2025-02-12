@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b3240e8f-443e-4bc0-b413-3440fe2224cb" name="Changes" comment="Breaking changes whatsapp bot">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/_redirects" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/maintenance/Error404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/maintenance/Error500.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/maintenance/TwoCone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/maintenance/coming-soon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/maintenance/under-construction.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-group.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authentication/auth/AuthFooter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authentication/authForms/AuthLogin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authentication/authForms/AuthRegister.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/dialog/SConfirmDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/dialog/SDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/dialog/useDialog.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/table/UiTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/table/UiTableHead.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/base/table/UiTableHeader.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/BaseBreadcrumb.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/ComponentTitle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/UiParentCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/UiTitleCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/LoaderWrapper.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/footer/FooterPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/logo/LogoDark.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/NotificationDD.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/ProfileDD.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/VerticalHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/vuetify.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_override.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VAlert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VBadge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VBreadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VButtons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VField.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VInput.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VNavigationDrawer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VShadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VTextField.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_VTextarea.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layout/_container.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layout/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layout/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/layout/_topbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/page/_dashboards.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/apps/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/authUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/customizer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stores/ui.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/chats/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/customers/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/ecommerce/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/mail/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/user/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/vue-apexcharts.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/vue_tabler_icon.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/helpers/fake-backend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/helpers/fetch-wrapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/locales/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/StarterPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/_main/GroupsView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/_main/SessionView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/_main/TesteView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/apps/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/colors/ColorPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/DefaultDashboard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/AnalyticsReport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/HelpSupport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/IncomeOverview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/RecentOrder.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/SalesReport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/TransactionHistory.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/UniqueVisitor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/components/WidgetFive.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forms/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/icons/AntDesignIcons.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/maintenance/comingsoon/Comingsoon1.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/maintenance/error/Error404Page.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/maintenance/error/Error500Page.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/underconstruction/UnderConstruction.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/shadows/ShadowPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/typography/TypographyPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/ui-elements/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/utilities/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/widgets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.vite-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/vue.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/vue.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/wpp_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/wpp_background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/wppcog.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/wppcog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/LoginDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/LoginDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/NavbarHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/RegisterDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/RegisterDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/blank/BlankLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/blank/BlankLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/IconSet.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/MainSidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/SidebarMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/NavCollapse/NavCollapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/NavCollapse/NavCollapse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/NavGroup/NavGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/NavGroup/NavGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/NavItem/NavItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/NavItem/NavItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/extrabox/ExtraBox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/extrabox/ExtraBox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/sidebarItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/sidebarItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/SearchBarPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/SearchBarPanel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/vuetify/theme.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/vuetify/type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/vuetify/vuetify.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/MainRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/MainRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/PublicRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/PublicRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Icon.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/public/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/public/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/assets/wpp_background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/assets/wppcog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/auth/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/auth/firebase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/components/public/LoginDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/components/public/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/components/public/RegisterDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/firebase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/layouts/main/sidebar/MainSidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/wpp-front/src/layouts/main/sidebar/MainSidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/plugins/vuetify/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wpp-front/src/plugins/vuetify/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/plugins/vuetify/vuetify.ts" beforeDir="false" afterPath="$PROJECT_DIR$/wpp-front/src/plugins/vuetify/vuetify.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wpp-front/src/views/public/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/wpp-front/src/views/public/Home.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="beto &lt;rm556544@fiap.com.br&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;allangnutzmans&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:0ldev/wpp-front.git&quot;,
+    &quot;accountId&quot;: &quot;dd575fca-7ace-4376-9f12-6f0a6b61bbb2&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2sokyxlVBETYOWp9MGPdKInCRW7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/allan/WebstormProjects/wpp-front/src/views/_main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/allan/WebstormProjects/wpp-front/node_modules/prettier",
+    "ts.external.directory.path": "/home/allan/WebstormProjects/wpp-front/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/_main" />
+      <recent name="$PROJECT_DIR$/src/components/core/dialog" />
+      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/core/dialog" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/auth" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3240e8f-443e-4bc0-b413-3440fe2224cb" name="Changes" comment="" />
+      <created>1739129573152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739129573152</updated>
+      <workItem from="1739129574184" duration="21858000" />
+      <workItem from="1739229082155" duration="8497000" />
+      <workItem from="1739307279109" duration="7093000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added router and vuetify">
+      <option name="closed" value="true" />
+      <created>1739129807788</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739129807788</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update authentication flow">
+      <option name="closed" value="true" />
+      <created>1739129893752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739129893752</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added code linter and formating">
+      <option name="closed" value="true" />
+      <created>1739129951959</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739129951959</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added types for theme declaration">
+      <option name="closed" value="true" />
+      <created>1739130003505</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739130003505</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added Blank Layout as parent component for public routes">
+      <option name="closed" value="true" />
+      <created>1739130039533</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739130039533</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added whatsappLight theme">
+      <option name="closed" value="true" />
+      <created>1739130065949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739130065949</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update routes">
+      <option name="closed" value="true" />
+      <created>1739130087497</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739130087497</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add sidebar components and styles for navigation">
+      <option name="closed" value="true" />
+      <created>1739147785002</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147785002</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated config files">
+      <option name="closed" value="true" />
+      <created>1739147875267</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147875267</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added vuetify and theme">
+      <option name="closed" value="true" />
+      <created>1739147897729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147897729</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added linter">
+      <option name="closed" value="true" />
+      <created>1739147914005</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147914005</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added routes and updated components">
+      <option name="closed" value="true" />
+      <created>1739147955880</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147955880</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added router and sidebar">
+      <option name="closed" value="true" />
+      <created>1739147977750</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739147977750</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added Blank Layout for public routes">
+      <option name="closed" value="true" />
+      <created>1739148019903</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739148019903</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added Sidebar">
+      <option name="closed" value="true" />
+      <created>1739148056537</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739148056537</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated Packages and improve folder organization">
+      <option name="closed" value="true" />
+      <created>1739148091931</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739148091931</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added router and vuetify" />
+    <MESSAGE value="Added code linter and formating" />
+    <MESSAGE value="Added types for theme declaration" />
+    <MESSAGE value="Added Blank Layout as parent component for public routes" />
+    <MESSAGE value="Added whatsappLight theme" />
+    <MESSAGE value="Update authentication flow" />
+    <MESSAGE value="Update routes" />
+    <MESSAGE value="Add sidebar components and styles for navigation" />
+    <MESSAGE value="Updated config files" />
+    <MESSAGE value="Added vuetify and theme" />
+    <MESSAGE value="Added linter" />
+    <MESSAGE value="Added routes and updated components" />
+    <MESSAGE value="Added router and sidebar" />
+    <MESSAGE value="Added Blank Layout for public routes" />
+    <MESSAGE value="Added Sidebar" />
+    <MESSAGE value="Updated Packages and improve folder organization" />
+    <MESSAGE value="Breaking changes Api" />
+    <MESSAGE value="Breaking changes whatsapp bot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Breaking changes whatsapp bot" />
+  </component>
+</project>
