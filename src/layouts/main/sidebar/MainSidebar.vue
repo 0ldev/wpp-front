@@ -5,7 +5,6 @@ import NavGroup from './NavGroup/NavGroup.vue';
 import NavItem from './NavItem/NavItem.vue';
 import NavCollapse from './NavCollapse/NavCollapse.vue';
 import ExtraBox from './extrabox/ExtraBox.vue';
-import Logo from '@/assets/wppcog.png';
 
 const sidebarMenu = shallowRef(sidebarItems);
 </script>
@@ -24,10 +23,6 @@ const sidebarMenu = shallowRef(sidebarItems);
   >
     <!---Logo part -->
 
-    <div class="pa-5 ">
-      <v-img :src="Logo" alt="WhatsApp Automation" contain height="60" />
-      <h3 class="hide-menu" >Whatsapp Manager</h3>
-    </div>
     <!-- ---------------------------------------------- -->
     <!---Navigation -->
     <!-- ---------------------------------------------- -->

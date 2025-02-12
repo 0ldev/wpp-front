@@ -1,37 +1,45 @@
 import type { ThemeTypes } from './type.ts';
 
 export const WhatsappLight: ThemeTypes = {
-  name: "WhatsappLight",
+  name: 'WhatsappLight',
   dark: false,
-  variables: {},
+  variables: {
+    'border-color': '#25D366',
+    'carousel-control-size': 10,
+    gradient: 'linear-gradient(250.38deg, #075e54 2.39%, #128C7E 34.42%, #25D366 60.95%, #34B7F1 84.83%, #DCF8C6 104.37%)',
+    gradient2: 'linear-gradient(to right, #128C7E, #25D366)',
+    'card-shadow': '0px 1px 4px rgba(0, 0, 0, 0.08)',
+    'medium-opacity': 0.85,
+    'high-opacity': 1
+  },
   colors: {
-    primary: "#0FA626",         // Verde principal
-    secondary: "#36D941",       // Verde secundário mais vibrante
-    info: "#82F27E",            // Verde claro para realces
-    success: "#0FA626",         // Mesma cor do primário para sucesso
-    accent: "#82F27E",          // Destaques com o tom verde claro
-    warning: "#FFAB00",         // Mantendo o tom de aviso
-    error: "#FF5252",           // Mantendo a cor de erro
-    lightprimary: "#82F27E",    // Variante mais clara do verde principal
-    lightsecondary: "#D9D4CC",  // Tom neutro extraído da imagem
-    lightsuccess: "#82F27E",    // Variante clara para sucesso
-    lighterror: "#FF8A80",      // Variante clara para erros
-    lightwarning: "#FFE57F",    // Variante clara para avisos
-    darkprimary: "#0D0D0D",     // Preto profundo da imagem para contrastes escuros
-    darksecondary: "#0FA626",   // Verde principal mais escuro
-    darkText: "#0D0D0D",        // Preto para textos escuros
-    lightText: "#FFFFFF",       // Branco para textos claros
-    borderLight: "#D9D4CC",     // Cor neutra extraída da imagem
-    inputBorder: "#5a5a5a",     // Mantendo o tom escuro para bordas
-    containerBg: "#D9D4CC",     // Usando o tom neutro como fundo de container
-    surface: "#FFFFFF",         // Fundo de elementos que se destacam da tela
-    background: "#F4F4F2",      // Mantendo o fundo claro padrão
-    "on-surface-variant": "#F0F0F0", // Variante para elementos sobre a superfície
-    facebook: "#3b5998",        // Cor do Facebook (caso seja necessário)
-    twitter: "#1DA1F2",         // Cor do Twitter (caso seja necessário)
-    linkedin: "#0077B5",        // Cor do LinkedIn (caso seja necessário)
-    gray100: "#F5F5F5",         // Cinza claro para elementos secundários
-    primary200: "#36D941",      // Variante intermediária do verde principal
-    secondary200: "#82F27E"     // Variante intermediária do verde secundário
+    primary: '#128C7E', // Verde característico do WhatsApp
+    secondary: '#25D366', // Verde claro do botão de envio
+    info: '#34B7F1', // Azul de notificações
+    success: '#25D366', // Mesmo verde claro
+    accent: '#DCF8C6', // Verde muito claro, usado em mensagens enviadas
+    warning: '#FFCE00', // Amarelo usado em alertas
+    error: '#D32F2F', // Vermelho para erros
+    lightprimary: '#E1FFC7', // Verde bem claro, fundo de mensagens enviadas
+    lightsecondary: '#F0F0F0', // Fundo de mensagens recebidas
+    lightsuccess: '#EAFCD4',
+    lighterror: '#FFDAD6',
+    lightwarning: '#FFF6D0',
+    darkText: '#111B21', // Cinza escuro dos textos principais
+    lightText: '#8696A0', // Cinza claro para textos secundários
+    darkprimary: '#075E54', // Verde escuro do cabeçalho do WhatsApp
+    darksecondary: '#0d211c',
+    borderLight: '#e9edef', // Cor de borda leve
+    inputBorder: '#667781', // Borda de input
+    containerBg: '#F0F2F5', // Fundo principal do WhatsApp Web
+    surface: '#FFFFFF', // Fundo de cartões e elementos
+    'on-surface-variant': '#FFFFFF',
+    facebook: '#4267b2',
+    twitter: '#1da1f2',
+    linkedin: '#0e76a8',
+    gray100: '#e9edef', // Cinza para elementos de fundo
+    primary200: '#25D366',
+    secondary200: '#E1FFC7'
   }
 };
+
