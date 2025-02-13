@@ -19,7 +19,7 @@ const MainRoutes = {
     {
       name: 'Groups',
       path: '/groups',
-      component: () => import('@/views/_main/GroupsView.vue')
+      component: () => import('@/views/_main/group/GroupsView.vue')
     },
     {
       name: 'Teste',

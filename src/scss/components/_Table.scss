@@ -1,0 +1,81 @@
+.whatsapp-table {
+  th {
+    padding: 10px 15px;
+    background-color: rgb(var(--v-theme-on-surface-variant));
+  }
+
+  tbody tr {
+    height: 50px;
+    font-size: 14px;
+    padding: 15px;
+    max-width: 100px;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgb(var(--v-theme-containerBg));
+    color: rgb(var(--v-theme-lightText));
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: rgb(var(--v-theme-containerBg));
+    color: rgb(var(--v-theme-lightText));
+  }
+
+  tbody tr:last-child {
+    border-radius: 0 0 0 0;
+    color: rgb(var(--v-theme-lightText));
+  }
+
+  tbody tr:hover {
+    background-color: rgba(var(--v-theme-surface));
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--v-theme-scroll);
+    height: 7px;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: var(--v-theme-scroll);
+    height: 7px;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--v-theme-scroll));
+    height: 7px;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: var(--v-theme-scroll);
+    height: 7px;
+    border-radius: 3px;
+  }
+
+/*  .mdi-checkbox-blank-outline {
+    color: rgb(var(--v-theme-lightText));
+  }
+
+  .mdi-checkbox-marked,
+  .mdi-minus-box {
+    color: rgb(var(--v-theme-secondary));
+  }*/
+}
+
+.v-table > .v-table__wrapper > table > thead > tr > th {
+  color: inherit;
+}
+.v-table.v-table--fixed-header > .v-table__wrapper > table > thead > tr > th {
+  background: rgb(var(--v-theme-on-surface-variant));
+}
+//Datatable footer
+.v-data-table-footer {
+  background-color: rgb(var(--v-theme-on-surface-variant));
+  color: rgb(var(--v-theme-lightText));
+  font-size: 14px;
+  padding: 0 10px;
+  height: 50px;
+  border-radius: 0 0 $border-radius-root $border-radius-root;
+}

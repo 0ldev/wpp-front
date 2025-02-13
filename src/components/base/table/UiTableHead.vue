@@ -1,13 +1,25 @@
+<script setup lang="ts">
+import SearchBarPanel from '@/layouts/main/vertical-header/SearchBarPanel.vue';
+
+defineProps<{
+  title: string,
+}>();
+
+const search = defineModel<string>('search');
+</script>
+
 <template>
-  <v-container>
-    <v-card elevation="2" class="pa-4">
-      <v-row align="center" justify="space-between">
-        <v-col cols="12" md="6">
-          <!--                    <SearchBar />-->
+    <div class="pa-4">
+      <v-row align="center">
+        <v-col class="d-flex align-center" cols="12" md="4">
+            <span class="text-h4">{{ title }}</span>
         </v-col>
-        <v-col cols="12" md="6">
-          <v-row align="center" justify="end" class="gap-2">
-            <slot name="create" />
+        <v-col cols="12" md="4">
+              <SearchBarPanel v-model="search" />
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-row align="center" justify="end" class="ga-2">
+            <slot />
             <v-menu offset-y>
               <template #activator="{ props }">
                 <v-btn v-bind="props" outlined>
@@ -54,10 +66,5 @@
           </v-row>
         </v-col>
       </v-row>
-    </v-card>
-  </v-container>
+    </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

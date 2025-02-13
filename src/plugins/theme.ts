@@ -13,8 +13,8 @@ export const WhatsappLight: ThemeTypes = {
     'high-opacity': 1
   },
   colors: {
-    primary: '#128C7E', // Verde característico do WhatsApp
-    secondary: '#25D366', // Verde claro do botão de envio
+    primary: '#008869', // Verde característico do WhatsApp
+    secondary: '#00e467', // Verde claro do botão de envio
     info: '#34B7F1', // Azul de notificações
     success: '#25D366', // Mesmo verde claro
     accent: '#DCF8C6', // Verde muito claro, usado em mensagens enviadas
@@ -25,13 +25,13 @@ export const WhatsappLight: ThemeTypes = {
     lightsuccess: '#EAFCD4',
     lighterror: '#FFDAD6',
     lightwarning: '#FFF6D0',
-    darkText: '#111B21', // Cinza escuro dos textos principais
-    lightText: '#8696A0', // Cinza claro para textos secundários
+    darkText: '#8696a0', // Cinza escuro dos textos principais
+    lightText: '#111B21', // Cinza claro para textos secundários
     darkprimary: '#075E54', // Verde escuro do cabeçalho do WhatsApp
     darksecondary: '#0d211c',
     borderLight: '#e9edef', // Cor de borda leve
     inputBorder: '#667781', // Borda de input
-    containerBg: '#F0F2F5', // Fundo principal do WhatsApp Web
+    containerBg: '#fdfdfd', // Fundo principal do WhatsApp Web
     surface: '#FFFFFF', // Fundo de cartões e elementos
     'on-surface-variant': '#FFFFFF',
     facebook: '#4267b2',
@@ -43,3 +43,4 @@ export const WhatsappLight: ThemeTypes = {
   }
 };
 
+//EEF0F3FF

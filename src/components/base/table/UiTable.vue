@@ -27,7 +27,7 @@ withDefaults(
     item-value=""
     return-object
     show-select
-    class="customize-table"
+    class="whatsapp-table over"
   >
     <template #top>
       <span class="mt-4"></span>
