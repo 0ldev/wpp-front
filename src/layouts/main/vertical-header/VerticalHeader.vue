@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { useCustomizerStore } from '../../../stores/customizer';
+import { user } from '@/auth/auth.ts';
+
 // icons
-import { MenuFoldOutlined, SearchOutlined, GithubOutlined } from '@ant-design/icons-vue';
+import { MenuFoldOutlined, SearchOutlined } from '@ant-design/icons-vue';
 
 // dropdown imports
 import NotificationDD from './NotificationDD.vue';
 import Searchbar from './SearchBarPanel.vue';
 import ProfileDD from './ProfileDD.vue';
+import { computed } from 'vue';
 
 const customizer = useCustomizerStore();
+
+const computeUser = computed(() => user.value?.user_metadata?.name || 'User')
 </script>
 
 <template>
@@ -86,7 +91,7 @@ const customizer = useCustomizerStore();
       <template v-slot:activator="{ props }">
         <v-btn class="profileBtn" variant="text" rounded="sm" v-bind="props">
           <div class="d-flex align-center">
-            <h6 class="text-subtitle-1 mb-0 d-sm-block d-none mr-sm-2">Allan</h6>
+            <h6 class="text-subtitle-1 mb-0 d-sm-block d-none mr-sm-2">{{ computeUser }}</h6>
             <v-avatar class="mr-0 py-2">
               <img src="../../../assets/images/users/avatar-1.png" alt="Julia" />
             </v-avatar>

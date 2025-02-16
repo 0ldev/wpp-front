@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { auth } from '@/auth/firebase';
 // icons
 import {
   LogoutOutlined,
@@ -14,9 +13,11 @@ import {
   ProfileOutlined,
   WalletOutlined
 } from '@ant-design/icons-vue';
+import { user } from '@/auth/auth.ts';
+import { router } from '@/router';
 
 const tab = ref(null);
-const { user } = auth;
+
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const { user } = auth;
         <img src="@/assets/images/users/avatar-1.png" width="32" alt="Julia" />
       </v-avatar>
       <div>
-        <h6 class="text-h6 mb-0">{{ user }}</h6>
+        <h6 class="text-h6 mb-0">{{ user.user_metadata.name }}</h6>
         <p class="text-caption mb-0">UI/UX Designer</p>
       </div>
       <div class="ml-auto">
@@ -54,7 +55,7 @@ const { user } = auth;
               <v-list-item-title class="text-h6"> Edit Profile</v-list-item-title>
             </v-list-item>
 
-            <v-list-item color="primary" rounded="0" value="View Profile">
+            <v-list-item @click="router.push('/profile')" color="primary" rounded="0" value="View Profile">
               <template v-slot:prepend>
                 <UserOutlined :style="{ fontSize: '14px' }" class="mr-4" />
               </template>
@@ -78,7 +79,7 @@ const { user } = auth;
               <v-list-item-title class="text-h6"> Billing</v-list-item-title>
             </v-list-item>
 
-            <v-list-item @click="authStore.logout()" color="secondary" rounded="0">
+            <v-list-item @click="() => console.log('logout')" color="secondary" rounded="0">
               <template v-slot:prepend>
                 <LogoutOutlined :style="{ fontSize: '14px' }" class="mr-4" />
               </template>

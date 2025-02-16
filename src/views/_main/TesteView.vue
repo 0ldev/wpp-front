@@ -27,7 +27,7 @@ const sendRequest = async () => {
 </script>
 
 <template>
-  <v-sheet color="b">
+  <v-sheet class="pa-2" color="surface">
     <div class="height">
       <v-row>
         <!-- Method -->

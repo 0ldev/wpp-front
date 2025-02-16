@@ -13,6 +13,7 @@ supabase.auth.onAuthStateChange((event, session) => {
   if (session) {
     isLoggedIn.value = true;
     user.value = session.user;
+    console.log(user.value)
   } else {
     isLoggedIn.value = false;
     user.value = null;

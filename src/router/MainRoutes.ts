@@ -22,6 +22,11 @@ const MainRoutes = {
       component: () => import('@/views/_main/group/GroupsView.vue')
     },
     {
+      name: 'Profile',
+      path: '/profile',
+      component: () => import('@/views/_main/profile/ProfileView.vue')
+    },
+    {
       name: 'Teste',
       path: '/teste',
       component: () => import('@/views/_main/TesteView.vue')

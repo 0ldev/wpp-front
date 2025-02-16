@@ -9,6 +9,7 @@ import NavItem from './NavItem/NavItem.vue';
 import NavCollapse from './NavCollapse/NavCollapse.vue';
 import ExtraBox from './extrabox/ExtraBox.vue';
 import { RouterLink } from 'vue-router';
+import { router } from '@/router';
 
 const customizer = useCustomizerStore();
 const sidebarMenu = shallowRef(sidebarItems);
@@ -28,10 +29,10 @@ const sidebarMenu = shallowRef(sidebarItems);
   >
     <div class="pa-4">
       <div class="logo">
-        <RouterLink class="d-flex align-center justify-center w-100" to="/dashboard" aria-label="logo">
-          <v-img :src="Logo" alt="WhatsApp Automation" contain height="60" />
-          <h3 class="hide-menu text-decoration-none text-no-wrap pe-5" >Whatsapp Bot</h3>
-        </RouterLink>
+        <v-sheet class="d-flex align-center justify-center w-100 cursor-pointer" @click="router.push('/dashboard')" aria-label="logo">
+          <v-img :src="Logo" alt="WhatsApp Automation" class="logo" contain min-height="60" min-width="60"  />
+          <h3 v-show="!customizer.mini_sidebar" class="hide-menu text-decoration-none text-no-wrap pe-5 mt-2" >Whatsapp Bot</h3>
+        </v-sheet>
       </div>
     </div>
     <!-- ---------------------------------------------- -->

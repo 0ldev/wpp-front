@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3240e8f-443e-4bc0-b413-3440fe2224cb" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;src/assets/images/vue.svg&#10;#&#9;src/assets/images/wpp_background.jpg&#10;#&#9;src/assets/images/wppcog.png&#10;#&#9;src/auth/auth.ts&#10;#&#9;src/components/public/LoginDialog.vue&#10;#&#9;src/components/public/NavbarHome.vue&#10;#&#9;src/components/public/RegisterDialog.vue&#10;#&#9;src/layouts/main/sidebar/SidebarMain.vue&#10;#&#9;src/plugins/vuetify/theme.ts&#10;#&#9;src/plugins/vuetify/vuetify.ts&#10;#&#9;src/views/public/Home.vue">
-      <change afterPath="$PROJECT_DIR$/src/views/_main/group/GroupsView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b3240e8f-443e-4bc0-b413-3440fe2224cb" name="Changes" comment="feat: Refactor user authentication handling">
+      <change afterPath="$PROJECT_DIR$/src/views/_main/profile/ProfileView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base/table/UiTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base/table/UiTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base/table/UiTableHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base/table/UiTableHead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/SearchBarPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/SearchBarPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugins/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/SidebarMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/SidebarMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/ProfileDD.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/ProfileDD.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/VerticalHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/VerticalHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/MainRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/MainRoutes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/_main/GroupsView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/_main/SessionView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/_main/SessionView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/_main/TesteView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/_main/TesteView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -67,7 +69,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/allan/WebstormProjects/wpp-front/src/views/_main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/allan/WebstormProjects/wpp-front&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,18 +87,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views/_main" />
       <recent name="$PROJECT_DIR$/src/components/core/dialog" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/_main/profile" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/views/_main/group" />
       <recent name="$PROJECT_DIR$/src/components/core/dialog" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/auth" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -118,6 +120,12 @@
       <workItem from="1739229082155" duration="8497000" />
       <workItem from="1739307279109" duration="7093000" />
       <workItem from="1739358918266" duration="12044000" />
+      <workItem from="1739408451698" duration="828000" />
+      <workItem from="1739445016275" duration="21000" />
+      <workItem from="1739553511782" duration="638000" />
+      <workItem from="1739742410593" duration="1908000" />
+      <workItem from="1739745277426" duration="2687000" />
+      <workItem from="1739747999030" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="Added router and vuetify">
       <option name="closed" value="true" />
@@ -247,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739148091931</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: implement group management features with new components and improved styling">
+      <option name="closed" value="true" />
+      <created>1739409575865</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739409575865</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +299,8 @@
     <MESSAGE value="Updated Packages and improve folder organization" />
     <MESSAGE value="Breaking changes Api" />
     <MESSAGE value="Breaking changes whatsapp bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Breaking changes whatsapp bot" />
+    <MESSAGE value="feat: implement group management features with new components and improved styling" />
+    <MESSAGE value="feat: Refactor user authentication handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Refactor user authentication handling" />
   </component>
 </project>

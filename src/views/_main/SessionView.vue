@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { user } from '@/auth/auth';
 import client from '@/api/client';
+import { router } from '@/router';
 
 const qrCode = ref<string | null>(null);
 const pairCode = ref<string | null>(null);
@@ -13,9 +14,7 @@ async function createQRSession() {
   loading.value = true;
   error.value = null;
   try {
-    const response = await client.post('/whatsapp/session/qr', {
-      userId: user.value.id
-    });
+    const response = await client.post(`/api/whatsapp/session/qr?userId=${user.value.id}`);
     qrCode.value = response.data.qrCode;
     startStatusCheck();
   } catch (err) {
@@ -45,7 +44,7 @@ async function createPairSession() {
 
 async function checkSessionStatus() {
   try {
-    const response = await client.get(`/whatsapp/session/status/${user.value.id}`);
+    const response = await client.get(`/api/whatsapp/session/status/${user.value.id}`);
     if (response.data.status === 'connected') {
       // Redirect to dashboard or update UI
       router.push('/dashboard');
@@ -57,7 +56,7 @@ async function checkSessionStatus() {
 
 function startStatusCheck() {
   const interval = setInterval(async () => {
-    const response = await client.get(`/whatsapp/session/status/${user.value.id}`);
+    const response = await client.get(`/api/whatsapp/session/status/${user.value.id}`);
     if (response.data.status === 'connected') {
       clearInterval(interval);
       router.push('/dashboard');

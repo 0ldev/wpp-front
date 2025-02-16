@@ -25,7 +25,6 @@
     "ant-design-vue": "4.2.6",
     "apexcharts": "4.3.0",
     "axios": "^1.7.9",
-    "firebase": "^11.3.0",
     "pinia": "2.3.0",
     "vee-validate": "4.15.0",
     "vite-plugin-vuetify": "2.0.4",

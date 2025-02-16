@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainRoutes from './MainRoutes';
 import PublicRoutes from './PublicRoutes';
 import { useUIStore } from '@/stores/ui';
-import { auth } from '@/auth/firebase';
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +29,7 @@ router.beforeEach(async (to, from, next) => {
 
   const isPublicPage = publicPages.includes(to.path);
   const authRequired = !isPublicPage && to.matched.some((record) => record.meta.requiresAuth);
-
+  /*
   // User not logged in and trying to access a restricted page
   if (authRequired && !auth.user) {
     //auth.returnUrl = to.fullPath; // Save the intended page
@@ -47,7 +46,8 @@ router.beforeEach(async (to, from, next) => {
   } else {
     // All other scenarios, either public page or authorized access
     next();
-  }
+  }*/
+  next();
 });
 
 router.beforeEach(() => {
