@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainRoutes from './MainRoutes';
 import PublicRoutes from './PublicRoutes';
 import { useUIStore } from '@/stores/ui';
-import { auth } from '@/auth/firebase';
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
