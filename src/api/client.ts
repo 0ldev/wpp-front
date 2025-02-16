@@ -1,9 +1,15 @@
 import axios from 'axios';
-import type { AxiosInstance } from 'axios';
 
+const baseURL = import.meta.env.DEV 
+  ? 'http://localhost:3131' 
+  : `https://${import.meta.env.VITE_RAILWAY_STATIC_URL}`;
 
-const client: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL + '/api'
-})
+const client = axios.create({
+  baseURL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  withCredentials: true,
+});
 
 export default client;

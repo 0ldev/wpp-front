@@ -1,93 +1,122 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
-import { ReloadIcon } from 'vue-tabler-icons';
-import client from '@/api/client';
+import { ref } from 'vue';
 import { user } from '@/auth/auth';
+import client from '@/api/client';
 
 const qrCode = ref<string | null>(null);
-const loading = ref(true);
-const isHovering = ref(false); // Estado para controlar o hover
+const pairCode = ref<string | null>(null);
+const loading = ref(false);
+const error = ref<string | null>(null);
+const loginMethod = ref<'qr' | 'pair'>('qr');
 
-onMounted(async () => {
-  await getQRCode();
-  loading.value = false;
-});
-
-
-async function getQRCode() {
+async function createQRSession() {
+  loading.value = true;
+  error.value = null;
   try {
     const response = await client.post('/whatsapp/session/qr', {
-      userId: user.value.uid
-    })
-    console.log(response)
-    qrCode.value = response.data.qrCode; // Set the QR code data URL
-  } catch (error) {
-    console.error('Error fetching QR code:', error);
+      userId: user.value.id
+    });
+    qrCode.value = response.data.qrCode;
+    startStatusCheck();
+  } catch (err) {
+    error.value = 'Failed to generate QR code';
+    console.error(err);
+  } finally {
+    loading.value = false;
   }
 }
 
-async function refresh() {
+async function createPairSession() {
+  loading.value = true;
+  error.value = null;
   try {
-    await axios.get('http://localhost:3000/wpp/refresh');
-    const response = await axios.get('http://localhost:3000/wpp/qrcode');
-    qrCode.value = response.data.qrCode; // Set the QR code data URL
-  } catch (error) {
-    console.error('Error fetching QR code:', error);
+    const response = await client.post('/whatsapp/session/pair', {
+      userId: user.value.id
+    });
+    pairCode.value = response.data.pairCode;
+    startStatusCheck();
+  } catch (err) {
+    error.value = 'Failed to generate pair code';
+    console.error(err);
+  } finally {
+    loading.value = false;
   }
 }
 
-// Funções para manipular o hover
-function onMouseEnter() {
-  isHovering.value = true;
+async function checkSessionStatus() {
+  try {
+    const response = await client.get(`/whatsapp/session/status/${user.value.id}`);
+    if (response.data.status === 'connected') {
+      // Redirect to dashboard or update UI
+      router.push('/dashboard');
+    }
+  } catch (err) {
+    console.error('Status check failed:', err);
+  }
 }
 
-function onMouseLeave() {
-  isHovering.value = false;
+function startStatusCheck() {
+  const interval = setInterval(async () => {
+    const response = await client.get(`/whatsapp/session/status/${user.value.id}`);
+    if (response.data.status === 'connected') {
+      clearInterval(interval);
+      router.push('/dashboard');
+    }
+  }, 3000);
 }
 </script>
 
 <template>
-  <div class="mt-16 d-flex align-center justify-center">
-    <v-card :loading="loading" variant="flat" width="500">
-      <v-card-item>
-        <div class="d-flex align-center justify-space-between">
-          <v-card-title>Connect your Device</v-card-title>
-          <v-card-subtitle>Scan with your Whatsapp camera</v-card-subtitle>
-        </div>
-      </v-card-item>
-      <v-card-text>
-        <!-- Container relativo para posicionamento absoluto dos cards -->
-        <div class="card-container">
-          <v-fade-transition>
-            <!-- QR Code Card (visible when not hovering) -->
-            <v-card
-              v-if="qrCode && !isHovering"
-              elevation="0"
-              class="d-flex justify-center absolute-card"
-              @mouseenter="onMouseEnter"
-              @mouseleave="onMouseLeave"
-            >
-              <v-img max-height="400" :src="qrCode" alt="WhatsApp QR Code" />
-            </v-card>
+  <v-card class="mx-auto mt-8" max-width="500">
+    <v-card-title>Connect WhatsApp</v-card-title>
+    
+    <v-card-text>
+      <v-btn-toggle v-model="loginMethod" mandatory>
+        <v-btn value="qr">QR Code</v-btn>
+        <v-btn value="pair">Pair Code</v-btn>
+      </v-btn-toggle>
 
-            <!-- Reload Icon Card (visible when hovering) -->
-            <v-card
-              v-else
-              height="400"
-              elevation="0"
-              class="d-flex align-center justify-center absolute-card"
-              @click="refresh"
-              @mouseenter="onMouseEnter"
-              @mouseleave="onMouseLeave"
-            >
-              <ReloadIcon size="100" />
-            </v-card>
-          </v-fade-transition>
-        </div>
-      </v-card-text>
-    </v-card>
-  </div>
+      <div v-if="loginMethod === 'qr'" class="mt-4">
+        <v-btn
+          block
+          color="primary"
+          :loading="loading"
+          @click="createQRSession"
+        >
+          Generate QR Code
+        </v-btn>
+        <v-img
+          v-if="qrCode"
+          :src="qrCode"
+          class="mt-4"
+          contain
+          height="300"
+        />
+      </div>
+
+      <div v-else class="mt-4">
+        <v-btn
+          block
+          color="primary"
+          :loading="loading"
+          @click="createPairSession"
+        >
+          Generate Pair Code
+        </v-btn>
+        <v-card-text v-if="pairCode" class="text-center text-h4">
+          {{ pairCode }}
+        </v-card-text>
+      </div>
+
+      <v-alert
+        v-if="error"
+        type="error"
+        class="mt-4"
+      >
+        {{ error }}
+      </v-alert>
+    </v-card-text>
+  </v-card>
 </template>
 
 <style scoped>

@@ -1,3 +1,7 @@
+# Server
+server/
+go.mod
+go.sum
 # Logs
 logs
 *.log
@@ -128,3 +132,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Development files
+tmp/

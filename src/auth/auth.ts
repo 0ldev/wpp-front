@@ -1,6 +1,5 @@
 import { ref } from 'vue';
-import { auth } from '@/auth/firebase';
-import { GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { supabase } from '@/auth/supabase';
 import { router } from '@/router';
 
 const isLoggedIn = ref(false);
@@ -10,29 +9,33 @@ const isPending = ref(false);
 
 const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://localhost:3131/api/auth';
 
-auth.onAuthStateChanged((user) => {
-  if (user) {
+supabase.auth.onAuthStateChange((event, session) => {
+  if (session) {
     isLoggedIn.value = true;
+    user.value = session.user;
   } else {
     isLoggedIn.value = false;
     user.value = null;
   }
 });
 
-const sendToBackend = async (endpoint: string, userData: any) => {
-  const response = await fetch(`${BACKEND_URL}/${endpoint}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(userData)
-  });
-  
-  if (!response.ok) {
-    throw new Error('Backend communication failed');
+const createUserDatabase = async (userId: string) => {
+  try {
+    const response = await fetch(`${BACKEND_URL}/create-database`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `userId=${userId}`
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to create user database');
+    }
+
+    return await response.json();
+  } catch (err) {
+    console.error("Database Creation Error:", err);
+    throw err;
   }
-  
-  const data = await response.json();
-  localStorage.setItem('token', data.token);
-  return data.token;
 };
 
 const googleSignIn = async () => {
@@ -40,23 +43,19 @@ const googleSignIn = async () => {
   isPending.value = true;
   
   try {
-    const provider = new GoogleAuthProvider();
-    const result = await signInWithPopup(auth, provider);
-    const idToken = await result.user.getIdToken();
+    const { data, error: signInError } = await supabase.auth.signInWithOAuth({
+      provider: 'google'
+    });
     
-    const userData = {
-      email: result.user.email,
-      uid: result.user.uid,
-      idToken
-    };
-
-    if (auth.currentUser){
-      user.value = result.user;
-      console.log(user.value)
-      await router.push('/dashboard')
+    if (signInError) throw signInError;
+    
+    if (data.user) {
+      user.value = data.user;
+      await createUserDatabase(data.user.id);  // Create database after successful sign-in
+      await router.push('/dashboard');
     }
     
-    return //await sendToBackend('google', userData); TODO FIX HERE
+    return data.session?.access_token;
   } catch (err) {
     console.error("Google Sign-In Error:", err);
     error.value = 'Could not complete sign in';
@@ -71,18 +70,21 @@ const registerWithEmailPassword = async (email: string, password: string, name: 
   isPending.value = true;
   
   try {
-    const result = await createUserWithEmailAndPassword(auth, email, password);
-    const idToken = await result.user.getIdToken();
+    const { data, error: signUpError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { name }
+      }
+    });
     
-    const userData = {
-      email: result.user.email,
-      name,
-      firebaseUid: result.user.uid,
-      provider: 'email',
-      idToken
-    };
+    if (signUpError) throw signUpError;
     
-    return await sendToBackend('register', userData);
+    if (data.user) {
+      await createUserDatabase(data.user.id);  // Create database after successful registration
+    }
+    
+    return data.session?.access_token;
   } catch (err) {
     console.error("Registration Error:", err);
     error.value = 'Could not complete registration';
@@ -97,15 +99,18 @@ const signInWithEmailPasswordFunc = async (email: string, password: string) => {
   isPending.value = true;
   
   try {
-    const result = await signInWithEmailAndPassword(auth, email, password);
-    const idToken = await result.user.getIdToken();
+    const { data, error: signInError } = await supabase.auth.signInWithPassword({
+      email,
+      password
+    });
     
-    const userData = {
-      email: result.user.email,
-      idToken
-    };
+    if (signInError) throw signInError;
     
-    return await sendToBackend('login', userData);
+    if (data.user) {
+      await createUserDatabase(data.user.id);  // Create database after successful sign-in
+    }
+    
+    return data.session?.access_token;
   } catch (err) {
     console.error("Sign-In Error:", err);
     error.value = 'Invalid email or password';
@@ -120,8 +125,8 @@ const logout = async () => {
   isPending.value = true;
   
   try {
-    await signOut(auth);
-    localStorage.removeItem('token');
+    const { error: signOutError } = await supabase.auth.signOut();
+    if (signOutError) throw signOutError;
   } catch (err) {
     console.error("Logout Error:", err);
     error.value = 'Could not complete logout';
