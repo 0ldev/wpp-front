@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import NavbarHome from '@/components/public/NavbarHome.vue';
 import BgImage from '@/assets/images/wpp_background.jpg';
-import { UsersGroupIcon } from 'vue-tabler-icons';
+import { CalendarIcon, CommandIcon, UsersGroupIcon, UserStarIcon } from 'vue-tabler-icons';
 
 const features = [
   { title: 'Group Management', icon: UsersGroupIcon, description: 'Extract phone numbers from groups and save them to TXT files.' },
-  { title: 'Custom Commands', icon: UsersGroupIcon, description: 'Create custom /commands that trigger automatic responses.' },
-  { title: 'Message Scheduling', icon: UsersGroupIcon, description: 'Schedule messages to be sent at specific times.' },
-  { title: 'Content Moderation', icon: UsersGroupIcon, description: 'Moderate group content with word filters and message type restrictions.' }
+  { title: 'Custom Commands', icon: CommandIcon, description: 'Create custom /commands that trigger automatic responses.' },
+  { title: 'Message Scheduling', icon: CalendarIcon, description: 'Schedule messages to be sent at specific times.' },
+  { title: 'Content Moderation', icon: UserStarIcon, description: 'Moderate group content with word filters and message type restrictions.' }
 ];
 </script>
 
