@@ -7,6 +7,7 @@
     "src/types/.d.ts"
   ],
   "compilerOptions": {
+    "moduleResolution": "node",
     // TODO REMOVE IT LATER
     "noEmitOnError": false,
     "skipLibCheck": true,
@@ -16,9 +17,9 @@
     "noImplicitAny": false,
     // END OF REMOVE IT LATER
     "ignoreDeprecations": "5.0",
-    "baseUrl": "./mantis-free-vuetify-vuejs-admin-template",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     "allowJs": true
   },

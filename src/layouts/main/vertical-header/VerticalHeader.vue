@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useCustomizerStore } from '../../../stores/customizer';
-import useSession from '@/auth/session.ts';
+import useSession from '@/auth/session';
 
 // icons
 import { MenuFoldOutlined, SearchOutlined } from '@ant-design/icons-vue';

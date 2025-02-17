@@ -7,7 +7,7 @@ const props = defineProps<{
   title: string;
 }>();
 
-const { isOpen, closeDialog } = useDialog(props.id);
+const { isOpen, close } = useDialog(props.id);
 
 const emit = defineEmits<{
   (event: 'cancel'): void;
@@ -16,12 +16,12 @@ const emit = defineEmits<{
 
 async function handleCancel() {
   emit('cancel');
-  closeDialog();
+  close();
 }
 
 async function handleSave() {
   emit('save');
-  closeDialog();
+  close();
 }
 </script>
 

@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { user } from '@/auth/auth';
 import client from '@/api/client';
 import { router } from '@/router';
+import useSession from '@/auth/session';
 
 const qrCode = ref<string | null>(null);
 const pairCode = ref<string | null>(null);
 const loading = ref(false);
 const error = ref<string | null>(null);
 const loginMethod = ref<'qr' | 'pair'>('qr');
+
+const { user } = useSession();
 
 async function createQRSession() {
   loading.value = true;

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainRoutes from './MainRoutes';
 import PublicRoutes from './PublicRoutes';
 import { useUIStore } from '@/stores/ui';
-import { supabase } from '@/auth/supabase.ts';
+import { supabase } from '@/auth/supabase';
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

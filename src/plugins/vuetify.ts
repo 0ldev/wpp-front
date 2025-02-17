@@ -8,6 +8,7 @@ import { WhatsappLight } from '@/plugins/theme.ts';
 
 const light: ThemeTypes = {
   dark: false,
+  name: 'light',
   variables: {
     'border-color': '#f0f0f0',
     'carousel-control-size': 10,

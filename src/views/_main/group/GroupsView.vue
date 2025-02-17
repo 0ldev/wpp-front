@@ -5,10 +5,11 @@ import ParentSheet from '@/components/base/sheet/ParentSheet.vue';
 import { useDummyStore } from '@/views/_main/group/useDummyStore.ts';
 import { useUIStore } from '@/stores/ui.ts';
 import { PlusIcon } from 'vue-tabler-icons';
+import type { UiTableHeader } from '@/components/base/table/UiTableHeader.ts';
 
 const { data, search } = useDummyStore();
 const uiStore = useUIStore();
-const headers: UiTableHead = [
+const headers: UiTableHeader[] = [
   { title: "First Name", key: "firstName" },
   { title: "Last Name", key: "lastName" },
   { title: "Maiden Name", key: "maidenName" },

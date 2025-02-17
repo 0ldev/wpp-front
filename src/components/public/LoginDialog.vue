@@ -51,7 +51,14 @@ const handleLogin = async () => {
         label="Password"
         type="password"
       />
-      <v-alert color="error" v-if="status?.error" :text="status?.error"></v-alert>
+
+      <!--TODO FIX HERE-->
+      <v-alert
+        color="error"
+        v-if="status && typeof status !== 'string' && 'error' in status"
+        :text="status.error.message"
+      />
+
 
       <v-divider class="mx-3">or</v-divider>
     </template>
@@ -63,7 +70,7 @@ const handleLogin = async () => {
               class="w-100"
               variant="flat"
               color="lightsecondary"
-              :disabled="status"
+              :disabled="status === 'pending'"
             >
               <BrandGoogleIcon class="me-2" />
               {{ status === 'pending' ? 'Loading...' : 'Sign in with Google' }}
