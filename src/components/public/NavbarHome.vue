@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import RegisterDialog from '@/components/public/RegisterDialog.vue';
-import { isLoggedIn } from '@/auth/auth';
 import Logo from '../../assets/images/wppcog.png';
 import LoginDialog from '@/components/public/LoginDialog.vue';
-
 </script>
 
 <template>

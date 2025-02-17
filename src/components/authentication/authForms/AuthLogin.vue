@@ -2,7 +2,6 @@
 import { ref } from 'vue';
 // icons
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons-vue';
-import { useAuthStore } from '@/stores/auth.ts';
 import { Form } from 'vee-validate';
 
 const checkbox = ref(false);
@@ -34,7 +33,7 @@ function validate(values: any, { setErrors }: any) {
   // Update the username with trimmed value
   username.value = trimmedUsername;
 
-  const authStore = useAuthStore();
+  const authStore = null;
   return authStore.login(trimmedUsername, password.value).catch((error) => setErrors({ apiError: error }));
 }
 </script>

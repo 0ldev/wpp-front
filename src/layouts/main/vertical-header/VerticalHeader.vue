@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useCustomizerStore } from '../../../stores/customizer';
-import { user } from '@/auth/auth.ts';
+import useSession from '@/auth/session.ts';
 
 // icons
 import { MenuFoldOutlined, SearchOutlined } from '@ant-design/icons-vue';
@@ -11,8 +11,9 @@ import Searchbar from './SearchBarPanel.vue';
 import ProfileDD from './ProfileDD.vue';
 import { computed } from 'vue';
 
-const customizer = useCustomizerStore();
 
+const customizer = useCustomizerStore();
+const { user } = useSession();
 const computeUser = computed(() => user.value?.user_metadata?.name || 'User')
 </script>
 

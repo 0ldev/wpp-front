@@ -1,4 +1,4 @@
-import { useAuthStore } from '@/stores/auth';
+import useSession from '@/auth/session.ts';
 
 export const fetchWrapper = {
   get: request('GET'),
@@ -36,7 +36,7 @@ function request(method: string) {
 
 function authHeader(url: string): Record<string, string> {
   // return auth header with jwt if user is logged in and request is to the api url
-  const { user } = useAuthStore();
+  const { user } = useSession();
   const isLoggedIn = !!user?.token;
   const isApiUrl = url.startsWith(import.meta.env.VITE_API_URL);
   if (isLoggedIn && isApiUrl) {
@@ -51,7 +51,7 @@ function handleResponse(response: Response): Promise<UserData> {
     const data = text && JSON.parse(text);
 
     if (!response.ok) {
-      const { user, logout } = useAuthStore();
+      const { user, logout } = useSession();
       if ([401, 403].includes(response.status) && user) {
         // auto logout if 401 Unauthorized or 403 Forbidden response returned from api
         logout();

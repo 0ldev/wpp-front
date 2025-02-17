@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3240e8f-443e-4bc0-b413-3440fe2224cb" name="Changes" comment="feat: Refactor user authentication handling">
-      <change afterPath="$PROJECT_DIR$/src/views/_main/profile/ProfileView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/backend.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authentication/authForms/AuthLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authentication/authForms/AuthLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/LoginDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/LoginDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/NavbarHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/NavbarHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/public/RegisterDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/public/RegisterDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/main/sidebar/SidebarMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/sidebar/SidebarMain.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/ProfileDD.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/ProfileDD.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/main/vertical-header/VerticalHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main/vertical-header/VerticalHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/MainRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/MainRoutes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/_main/SessionView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/_main/SessionView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/_main/TesteView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/_main/TesteView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/fetch-wrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/fetch-wrapper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="Vue Composition API Component" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -125,7 +123,7 @@
       <workItem from="1739553511782" duration="638000" />
       <workItem from="1739742410593" duration="1908000" />
       <workItem from="1739745277426" duration="2687000" />
-      <workItem from="1739747999030" duration="624000" />
+      <workItem from="1739747999030" duration="5932000" />
     </task>
     <task id="LOCAL-00001" summary="Added router and vuetify">
       <option name="closed" value="true" />
@@ -263,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739409575865</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: Refactor user authentication handling">
+      <option name="closed" value="true" />
+      <created>1739748691211</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739748691211</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: Refactor user authentication handling">
+      <option name="closed" value="true" />
+      <created>1739748796950</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1739748796950</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

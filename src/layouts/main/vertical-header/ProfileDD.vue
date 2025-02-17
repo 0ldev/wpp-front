@@ -13,9 +13,11 @@ import {
   ProfileOutlined,
   WalletOutlined
 } from '@ant-design/icons-vue';
-import { user } from '@/auth/auth.ts';
-import { router } from '@/router';
 
+import { router } from '@/router';
+import useSession from '@/auth/session.ts';
+
+const { user, logout } = useSession();
 const tab = ref(null);
 
 </script>
@@ -34,7 +36,7 @@ const tab = ref(null);
         <p class="text-caption mb-0">UI/UX Designer</p>
       </div>
       <div class="ml-auto">
-        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="">
+        <v-btn variant="text" color="primary" rounded="sm" icon size="large" @click="logout">
           <LogoutOutlined :style="{ fontSize: '20px' }" />
         </v-btn>
       </div>

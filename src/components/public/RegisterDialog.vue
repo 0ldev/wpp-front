@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { registerWithEmailPassword } from '@/auth/auth';
+/*import { registerWithEmailPassword } from '@/auth/auth';*/
 import SDialog from '@/components/base/dialog/SDialog.vue';
 import { useDialog } from '@/components/base/dialog/useDialog';
 
@@ -14,7 +14,8 @@ const { open, close } = useDialog('@register')
 
 const register = async () => {
   try {
-    await registerWithEmailPassword(newUser.value);
+   // await registerWithEmailPassword(newUser.value);
+    alert('register is disabled');
   } catch (error: any) {
     alert(error.message);
   }
